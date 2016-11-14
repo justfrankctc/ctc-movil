@@ -1,25 +1,23 @@
 var j$ = jQuery.noConflict();
 
-function send() {
-	user = j$('#in_user').val();
-	pass = j$('#in_pass').val();
-	parameters = {
-	    "email": user,
-	    "password": pass
-	};
+j$("#singIn").click(function(){
+ 	console.log('Load signIn...');
+ 	j$( "#content" ).load( "/../signIn.html", function(response, status, xhr ) {
+        if ( status == "error" ) {
+            console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
+        } else {
+           console.log( "SignIn was loaded!" );
+        }
+    });
+});
 
-	urlSite ="http://192.168.1.33:8080/ctc.traccar.web/login.htm";
-	container = j$('.container');
-
-
-	result = openPage(urlSite, container, parameters);
-
-	if (result.readyState == 4 && result.status == 200) {
-	    console.log('Login exitoso!');
-	} else{
-		alert('Serivicio no disponible, intentalo más tarde');
-		console.log('Estatus de la peticion: '+result.status);
-		console.log('Result: '+result.responseText);
-	}	
-
-}
+j$("#singUp").click(function(){
+    console.log('Load signUp...');
+    j$( "#content" ).load( "/../signUp.html", function(response, status, xhr ) {
+        if ( status == "error" ) {
+            console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
+        } else {
+           console.log( "SignUp was loaded!" );
+        }
+    });
+});
