@@ -1,0 +1,13 @@
+.ctctypo{
+	font-family: "Avenir Next" !important;
+}
+
+.btn-verde-ctc{
+ 	background-color: #78be20;
+ 	color: #fff;
+}
+
+body > .container{
+	padding-top: 60px; 
+}
+
