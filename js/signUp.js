@@ -3,9 +3,11 @@ var j$ = jQuery.noConflict();
 j$('#error').hide();
 
 j$('#send').click(function() {
-	user = j$('#in_user').val();
+	name = j$('#in_name').val();
+	email = j$('#in_email').val();
 	pass = j$('#in_pass').val();
 	parameters = {
+		"name": name,
 	    "email": user,
 	    "password": pass
 	};
