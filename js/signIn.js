@@ -12,7 +12,7 @@ j$('#in_user').focusout(function(){
 });
 
 j$('#in_pass').focusout(function(){
-	 validaVacio(j$('#in_pass').val(), err_div_pass);
+	 validaVacio(j$('#in_pass').val(), div_err_pass);
 });
 
 j$('#send').click(function() {
