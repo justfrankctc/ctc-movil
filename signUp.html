@@ -7,12 +7,19 @@
         <form action="">
             <div class="form-group">
                 <input id="in_name" type="text" class="form-control" placeholder="nombre" />
+                <div class="alert alert-danger" id="err_in_name"></div>
             </div>
             <div class="form-group">
                 <input id="in_email" type="text" class="form-control" placeholder="correo" />
+                <div class="alert alert-danger" id="err_in_email"></div>
             </div>
             <div class="form-group">
                 <input id="in_pass" type="password" class="form-control" placeholder="contraseña" />
+                <div class="alert alert-danger" id="err_in_pass"></div>
+            </div>
+            <div class="form-group">
+                <input id="in_pass_conf" type="password" class="form-control" placeholder="confirma contraseña" />
+                <div class="alert alert-danger" id="err_in_pass_conf"></div>
             </div>
         </form>
     </div>
@@ -31,13 +38,13 @@
     <div class="col-md-2"></div>
     <div class="col-md-8" align="center">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <button class="form-control btn btn-verde-ctc" id="send">
                     Enviar 
                 </button>
             </div>
             &nbsp;
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <button class="form-control btn btn-verde-ctc" id="back">
                     Cancelar
                 </button>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -39,6 +40,8 @@
         var j$ = jQuery.noConflict();
         j$(document).ready( function (){
             console.log('Finish load!');
+            alert("DOM refreshed");
+            // j$( ".container" ).load( "login.html", function(response, status, xhr ) {
             j$( ".container" ).load( "login.html", function(response, status, xhr ) {
                 if ( status == "error" ) {
                     console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
