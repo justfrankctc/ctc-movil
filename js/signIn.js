@@ -37,9 +37,9 @@ j$('#send').click(function() {
 	xmlhttp.onreadystatechange = function () { //Call a function when the state changes.
 		console.log('Data sent!');
 	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-	        // alert(xmlhttp.responseText);
-	        alert('Login exitoso!');
-	        console.log('Login exitoso!');
+	        urlMap = "http://192.168.1.40:3000/testMapa.html";
+	        window.open(urlMap);
+	        
 	    } else{
 	    	errorContainer.show();
 	    	errorContainer.text('Serivicio no disponible, intentalo más tarde');
@@ -50,21 +50,17 @@ j$('#send').click(function() {
 	
 	var parametersJSON = JSON.stringify(parameters);
 	console.log('Sending data...');
+	
 	var userValido = validaVacio(user, div_err_user);
 	var passValido = validaVacio(pass, div_err_pass);
+	var lat = "19.4339794";
+	var long = "-99.1553828";
 	if(userValido && passValido){
-		alert("Éxito!");
+		urlMap = "http://192.168.1.40:3000/testMapa.html?&lat="+lat+"&long="+long;
+		// cordova.InAppBrowser.open;
+		window.open(urlMap, "_self");
+		// xmlhttp.send(parametersJSON);
 	}
-	// j$( ".container" ).load( "http://192.168.1.40:3000/testMapa.html", function(response, status, xhr ) {
-	//     if ( status == "error" ) {
-	//         alert("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
-	//     } else {
-	//        console.log( "We're in Login, again!" );
-	//     }
-	// });
-	
-	// debugger;
-	// xmlhttp.send(parametersJSON);
 
 });
 
@@ -77,7 +73,7 @@ j$("#back").click(function(){
            console.log( "We're in Login, again!" );
         }
     });
-});
+}); // fin document.ready
 
 function validaVacio(campo, err_div){
 	var valido = true;

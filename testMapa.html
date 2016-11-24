@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+      <meta charset="UTF-8">
+      <!-- <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      
+      <!-- font del login -->
+      <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+      <!-- custom Style -->
+      <link rel="stylesheet" href="css/map.css">
+      
+      <!-- cordova -->
+      <!-- <script type="text/javascript" src="cordova.js"></script> -->
+
+      <!-- JQuery 3-->
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+      
+      <!-- JQuery UI-->
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script type="text/javascript" src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+      <!-- JS GMAP  -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkLI9ZSN9-0Sp6nxszuaQOeC7RHjUY0uc"></script>
+
+      <!-- custom JS -->
+      <script type="text/javascript" src="js/map.js"></script>
+
+      <title>CTC móvil</title>
   </head>
   <body>
-  <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <div class="mapMenu"></div>
     <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 19.4339794, lng: -99.1553828},
-          zoom: 15
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkLI9ZSN9-0Sp6nxszuaQOeC7RHjUY0uc&callback=initMap"
-    async defer></script>
   </body>
 </html>
