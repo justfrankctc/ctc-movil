@@ -1,5 +1,3 @@
-var j$ = jQuery.noConflict();
-
 j$('#error').hide();
 div_err_user = j$('#err_in_user');
 div_err_pass = j$('#err_in_pass');

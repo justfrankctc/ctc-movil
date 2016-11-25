@@ -21,7 +21,7 @@
         if ( status == "error" ) {
             console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
         } else {
-           console.log( "We're in Login, again!" );
+           console.log( "readyMenu" );
         }
     });
   });

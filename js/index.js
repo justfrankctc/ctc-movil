@@ -1,17 +1,16 @@
-function openPage(urlSite, parameters){
-	xmlhttp = new XMLHttpRequest();
+document.addEventListener("deviceready", onDeviceReady, false);
 
-	xmlhttp.open("POST", urlSite, true);
-	xmlhttp.setRequestHeader("Content-type", "application/json");
-	xmlhttp.setRequestHeader("X-Parse-Application-Id", "VnxVYV8ndyp6hE7FlPxBdXdhxTCmxX1111111");
-	xmlhttp.setRequestHeader("X-Parse-REST-API-Key","6QzJ0FRSPIhXbEziFFPs7JvH1l11111111");
+var j$ = jQuery.noConflict();
 
-	parametersJSON = JSON.stringify(parameters);
-	
-	xmlhttp.send(parametersJSON);
-
-	// return xmlhttp;
-
-	return "HOla!";
-	
+function onDeviceReady() {
+    alert("Device is Ready");
+    console.log("Device is Ready");
+    
+    j$( ".container" ).load( "login.html", function(response, status, xhr ) {
+        if ( status == "error" ) {
+            console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
+        } else {
+            console.log( "Login was loaded!" );
+        }
+    });
 }

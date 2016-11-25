@@ -31,26 +31,13 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
+    <!-- custom JS     -->
+    <script type="text/javascript" src="js/index.js"></script>
     <title>CTC móvil</title>
-    
 </head>
 <body>
-    <script type="text/javascript" >
-        var j$ = jQuery.noConflict();
-        j$(document).ready( function (){
-            console.log('Finish load!');
-            alert("DOM refreshed");
-            // j$( ".container" ).load( "login.html", function(response, status, xhr ) {
-            j$( ".container" ).load( "login.html", function(response, status, xhr ) {
-                if ( status == "error" ) {
-                    console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
-                } else {
-                    console.log( "Login was loaded!" );
-                }
-            });
-        });
-    </script>
+
     <div class="container">
         
     </div>
