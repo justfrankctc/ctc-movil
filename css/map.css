@@ -7,7 +7,7 @@
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
-  margin: 0;Pg
+  margin: 0;
   padding: 0;
 }
 .btn-verde-ctc{
@@ -15,5 +15,10 @@ html, body {
   color: #fff;
 }
 .container{
-  background-color: #E0E3E3;
+  background-color: #78be20;
 }
+
+.menuItem{
+	list-style: none;
+}
+

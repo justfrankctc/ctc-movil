@@ -57,7 +57,9 @@ j$('#send').click(function() {
 		urlMap = "http://192.168.1.40:3000/Map.html?&lat="+lat+"&long="+long;
 		// cordova.InAppBrowser.open;
 		// window.open(urlMap, "_self");
-		var ref = cordova.InAppBrowser.open(urlMap, '_blank', 'location=yes');
+		var options = 'toolbar=no,location=no';		
+
+		var ref = cordova.InAppBrowser.open(urlMap, '_blank', options);
 		// xmlhttp.send(parametersJSON);
 	}
 

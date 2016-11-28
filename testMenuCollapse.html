@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
     <!-- custom Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
     
     <!-- cordova -->
     <script type="text/javascript" src="cordova.js"></script>
@@ -32,13 +32,22 @@
     <script src="lib/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- custom JS     -->
-    <script type="text/javascript" src="js/index.js"></script>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
     <title>CTC móvil</title>
 </head>
 <body>
-
-    <div class="container">
-        
+    <div class="container btn-verde-ctc">
+        <button class="btn btn-verde-ctc">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <div id="menu">
+            <ul>
+                <li class="menuItem"><a id="Ind">Indicadores</a></li>
+                <li class="menuItem"><a id="Com">Comando</a></li>
+                <li class="menuItem"><a id="Ale">Alertas</a></li>
+                <li class="menuItem"><a id="Geo">Geo-cercas</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
