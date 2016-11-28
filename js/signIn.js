@@ -54,9 +54,10 @@ j$('#send').click(function() {
 	var lat = "19.4339794";
 	var long = "-99.1553828";
 	if(userValido && passValido){
-		urlMap = "http://192.168.1.40:3000/testMapa.html?&lat="+lat+"&long="+long;
+		urlMap = "http://192.168.1.40:3000/Map.html?&lat="+lat+"&long="+long;
 		// cordova.InAppBrowser.open;
-		window.open(urlMap, "_self");
+		// window.open(urlMap, "_self");
+		var ref = cordova.InAppBrowser.open(urlMap, '_blank', 'location=yes');
 		// xmlhttp.send(parametersJSON);
 	}
 
