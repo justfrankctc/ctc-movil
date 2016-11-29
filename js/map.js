@@ -31,7 +31,24 @@
         }
     });
 
-    // j$('#map').text("center: {lat: "+lat+", lng: "+lng+"}");
+    j$('#menu').hide();
+
+    j$('#menuCollapse').click(function(){
+        j$('#menu').toggle();
+    });
+
+    j$('#Ind').click(function(){
+       alert('#Ind');
+    });
+    j$('#Com').click(function(){
+       alert('#Com');
+    });
+    j$('#Ale').click(function(){
+       alert('#Ale');
+    });
+    j$('#Geo').click(function(){
+       alert('#Geo');
+    });
   // });
   }
   

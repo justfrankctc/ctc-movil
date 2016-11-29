@@ -1,18 +1,92 @@
-<style type="text/css">
-	a{
-		text-decoration: none;
-	}
-</style>	
+<link rel="stylesheet" type="text/css" href="css/mapMenu.css">
 <div class="container btn-verde-ctc">
-	<button class="btn btn-verde-ctc">
-	    <span class="glyphicon glyphicon-menu-hamburger"></span>
-	</button>
-	<div id="menu">
-		<ul>
-			<li class="menuItem"><a id="Ind">Indicadores</a></li>
-			<li class="menuItem"><a id="Com">Comando</a></li>
-			<li class="menuItem"><a id="Ale">Alertas</a></li>
-			<li class="menuItem"><a id="Geo">Geo-cercas</a></li>
-		</ul>
-	</div>
+    <button id="menuCollapse" class="btn btn-verde-ctc">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+    <div id="menu">
+        <ul>
+            <li class="menuItem"><a id="Ind">Indicadores</a></li>
+            <li class="menuItem"><a id="Com">Comando</a></li>
+            <li class="menuItem"><a id="Ale">Alertas</a></li>
+            <li class="menuItem"><a id="Geo">Geo-cercas</a></li>
+        </ul>
+    </div>
+
+    <!-- The Ind Modal -->
+    <div id="modal-Ind" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="row close-Sing">
+          <span class="close" data-target="modal-Ind">x</span>
+        </div>
+        <div class="row modalContainer">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <a class="panel-a" data-toggle="collapse" data-target="#gas" href="#gas">
+                            <div class="panel-heading">Gasolina</div>
+                        </a>
+                        <div class="panel-body" id="gas" class="collapse">
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40"
+                              aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                70% 
+                              </div>
+                            </div>
+                        </div>
+                    </di                <div class="panel panel-default">
+                        <a class="panel-a" data-toggle="collapse" data-target="#ace" href="#ace">
+                            <div class="panel-heading">Aceite</div>
+                        </a>
+                        <div class="panel-body" id="ace" class="collapse">
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40"
+                              aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                60% 
+                              </div>
+                            </div>
+                        </div>
+                    </di            </div>
+            </div>
+        </div> 
+      </div>              
+    </div>
+
+    <!-- The Ind Modal -->
+    <div id="modal-Com" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="row close-Sing">
+          <span class="close">x</span>
+        </div>
+        
+      </div>              
+    </div>
+
+    <!-- The Ind Modal -->
+    <div id="modal-Ale" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="row close-Sing">
+          <span class="close">x</span>
+        </div>
+        
+      </div>              
+    </div>
+
+    <!-- The Ind Modal -->
+    <div id="modal-Geo" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="row close-Sing">
+          <span class="close">x</span>
+        </div>
+        
+      </div>              
+    </div>
 </div>
+<script type="text/javascript" src="js/mapMenu.js"></script>
