@@ -6,6 +6,47 @@ j$('#menuCollapse').click(function(){
     j$('#menu').toggle();
 });
 
+j$('#customCmd').hide();
+j$('#cmd').change(function(){
+    if(this.value=='customCmd'){
+        j$('#customCmd').show();
+    } else{
+        j$('#customCmd').hide();
+    }
+});
+
+j$('#sendCmd').click(function(){
+    alert('Comando enviado');
+});
+
+var triangleCoords = undefined;
+var bermudaTriangle = undefined;
+
+j$('#geo001').click(function(){
+    closeModal(modalGeo);
+    var checked = j$('#geo001').prop('checked');
+    if(bermudaTriangle == undefined){ 
+        if(triangleCoords ==undefined){
+            triangleCoords = [
+                {lat: 19.438591, lng: -99.154154},
+                {lat: 19.4339584, lng: -99.1551004},
+                {lat: 19.436710, lng: -99.150229}
+            ];
+        }
+         bermudaTriangle = new google.maps.Polygon({
+            paths: triangleCoords,
+            strokeColor: '#517F17',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#78be20',
+            fillOpacity: 0.35
+        });
+    }
+    debugger;
+    showGeofence(bermudaTriangle, map, checked);
+    
+});
+
 // Get the modal
 var modalInd = j$('#modal-Ind');
 var modalCom = j$('#modal-Com');
@@ -85,4 +126,16 @@ window.onclick = function(event) {
             closeModal(modalGeo);
         }
     // }
+}
+
+function showGeofence(pol, map, show){
+       
+    // Construct the polygon.
+    
+    if(show){
+        // Define the LatLng coordinates for the polygon's path.
+        pol.setMap(map);
+    }else{
+        pol.setMap(null);
+    }
 }

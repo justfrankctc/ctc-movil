@@ -1,74 +1,57 @@
 <!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		   <meta name="viewport" content="width=device-width, initial-scale=1">
-		   
-		   <!-- Latest compiled and minified CSS -->
-		   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple Polygon</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
 
-		   <!-- Optional theme -->
-		   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		   
-		   <!-- font del login -->
-		   <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+      // This example creates a simple polygon representing the Bermuda Triangle.
 
-		   <!-- custom Style -->
-		   <link rel="stylesheet" href="css/style.css">
-		   <link rel="stylesheet" href="css/test.css">
-		   
-		   <!-- cordova -->
-		   <script type="text/javascript" src="cordova.js"></script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: {lat: 19.438591, lng: -99.154154},
+          mapTypeId: 'terrain'
+        });
 
-		   <!-- JQuery 3-->
-		   <script src="lib/jquery-3.1.1.min.js"></script>
-		   
-		   <!-- JQuery UI-->
-		   <script src="lib/jquery-ui.min.js"></script>
+        // Define the LatLng coordinates for the polygon's path.
+        var triangleCoords = [
+          {lat: 19.438591, lng: -99.154154},
+          {lat: 19.4339584, lng: -99.1551004},
+          {lat: 19.436710, lng: -99.150229}
+        ];
 
-		   <!-- Latest compiled and minified JavaScript -->
-		   <script src="lib/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-		   <!-- custom JS     -->
-		   <script type="text/javascript" src="js/test.js"></script>
-		   <title>Test</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel panel-default">
-						<a data-toggle="collapse" data-target="#gas" href="#gas">
-								<div class="panel-heading">Gasolina</div>
-						</a>
-  						<div class="panel-body" id="gas" class="collapse">
-  							<div class="progress">
-  							  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40"
-  							  aria-valuemin="0" aria-valuemax="100" style="width:70%">
-  							    70% 
-  							  </div>
-  							</div>
-  						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<a data-toggle="collapse" data-target="#ace" href="#ace">
-							Aceite</a>
-						</div>
-  						<div class="panel-body" id="ace" class="collapse">
-  							<div class="progress">
-  							  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40"
-  							  aria-valuemin="0" aria-valuemax="100" style="width:60%">
-  							    60% 
-  							  </div>
-  							</div>
-  						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</body>
-	</html>	
+        // Construct the polygon.
+        var bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#517F17',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#78be20',
+          fillOpacity: 0.35
+        });
+        bermudaTriangle.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkLI9ZSN9-0Sp6nxszuaQOeC7RHjUY0uc&callback=initMap">
+    </script>
+  </body>
+</html>

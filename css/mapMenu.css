@@ -61,6 +61,16 @@ a {
 
 .close-Sing{
     margin: -15px -12px 12px 0;
-    text-align: right;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+
 }
 
+.center{
+    text-align: center;
+}
+
+.liGeo{
+    color: #000;
+}

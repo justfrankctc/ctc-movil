@@ -51,8 +51,8 @@ j$('#send').click(function() {
 	
 	var userValido = validaVacio(user, div_err_user);
 	var passValido = validaVacio(pass, div_err_pass);
-	var lat = "19.4339794";
-	var long = "-99.1553828";
+	var lat = "19.438591"; 
+	var long = "-99.154154"
 	if(userValido && passValido){
 		urlMap = "http://192.168.1.40:3000/Map.html?&lat="+lat+"&long="+long;
 		// cordova.InAppBrowser.open;
