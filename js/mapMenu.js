@@ -21,7 +21,10 @@ j$('#sendCmd').click(function(){
 
 var triangleCoords = undefined;
 var bermudaTriangle = undefined;
-
+var directionsService = new google.maps.DirectionsService;
+var directionsDisplay = new google.maps.DirectionsRenderer;
+var org = undefined;
+var dest =  undefined;
 j$('#geo001').click(function(){
     closeModal(modalGeo);
     var checked = j$('#geo001').prop('checked');
@@ -42,9 +45,18 @@ j$('#geo001').click(function(){
             fillOpacity: 0.35
         });
     }
-    debugger;
-    showGeofence(bermudaTriangle, map, checked);
-    
+    // debugger;
+    showGeofence(bermudaTriangle, map, checked);    
+});
+
+j$('#routeGen').click(function(){
+    if(org == undefined){
+        org = {lat: 19.4339794, lng: -99.1553828};
+    }
+    if(dest == undefined){
+        dest = {lat: 19.438591,lng: -99.154154};
+    }
+    calculateAndDisplayRoute(directionsService, directionsDisplay, org, dest);
 });
 
 // Get the modal
@@ -138,4 +150,19 @@ function showGeofence(pol, map, show){
     }else{
         pol.setMap(null);
     }
+}
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay,origin, destination) {
+    directionsDisplay.setMap(map);
+    directionsService.route({
+        origin: origin,          
+        destination: destination,
+        travelMode: 'DRIVING'
+    }, function(response, status) {
+        if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+        } else {
+            alert('Directions request failed due to ' + status);
+        }        
+    });
 }

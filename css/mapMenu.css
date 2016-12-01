@@ -74,3 +74,13 @@ a {
 .liGeo{
     color: #000;
 }
+
+.fRigth{
+    float: right;
+}
+
+.routeGenIcon{
+    margin: 4px -22px;
+    height: 24px; 
+    width:24px;
+}
