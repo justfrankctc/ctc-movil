@@ -2,7 +2,7 @@ var j$ = jQuery.noConflict();
 
 j$("#singIn").click(function(){
  	console.log('Load signIn...');
- 	j$( "#content" ).load( "http://192.168.1.40:3000/signIn.html", function(response, status, xhr ) {
+ 	j$( "#content" ).load(host+"/signIn.html", function(response, status, xhr ) {
         if ( status == "error" ) {
             console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
         } else {
@@ -13,7 +13,7 @@ j$("#singIn").click(function(){
 
 j$("#singUp").click(function(){
     console.log('Load signUp...');
-    j$( "#content" ).load( "http://192.168.1.40:3000/signUp.html", function(response, status, xhr ) {
+    j$( "#content" ).load(host+"/signUp.html", function(response, status, xhr ) {
         if ( status == "error" ) {
             alert("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
         } else {

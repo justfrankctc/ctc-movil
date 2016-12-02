@@ -13,7 +13,7 @@
             <li class="menuItem"><a id="Ind">Indicadores</a></li>
             <li class="menuItem"><a id="Com">Comando</a></li>
             <li class="menuItem"><a id="Ale">Alertas</a></li>
-            <li class="menuItem"><a id="Geo">Geo-cercas</a></li>
+            <!-- <li class="menuItem"><a id="Geo">Geo-cercas</a></li> -->
         </ul>
     </div>
 
@@ -72,7 +72,7 @@
     </div>              
     
 
-    <!-- The Ind Modal -->
+    <!-- The Com Modal -->
     <div id="modal-Com" class="modal">
 
       <!-- Modal content -->
@@ -123,19 +123,71 @@
       </div>              
     </div>
 
-    <!-- The Ind Modal -->
+    <!-- The Ale Modal -->
     <div id="modal-Ale" class="modal">
 
       <!-- Modal content -->
       <div class="modal-content">
         <div class="row close-Sing">
           <span class="close">x</span>
-        </div>
-        
+        </div>        
+
+        <div class="panel panel-default">
+          <a class="panel-a" data-toggle="collapse" data-target="#today" href="#today">
+            <div class="panel-heading">Hoy</div>
+          </a>
+          <div class="panel-body" id="today" class="collapse">
+            <table class="table table-striped alertasTable">
+              <thead>
+                <!-- <tr>
+                  <th>Hora</th>
+                  <th>Descripcion</th>
+                </tr> -->
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9:12</td>
+                  <td>Se ha superado el limite de rpm</td>
+                </tr>
+                <tr>
+                  <td>10:23</td>
+                  <td>Se ha salido de la geocerca</td>
+                </tr>
+                <tr>
+                  <td>12:57</td>
+                  <td>Es necesario reabastecer tanque de gasolina</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>               
+
+        <div class="panel panel-default">
+          <a class="panel-a" data-toggle="collapse" data-target="#yest" href="#yest">
+            <div class="panel-heading">Ayer</div>
+          </a>
+          <div class="panel-body" id="yest" class="collapse">
+            <table class="table table-striped alertasTable">
+              <thead>
+                <!-- <tr>
+                  <th>Hora</th>
+                  <th>Descripcion</th>
+                </tr> -->
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8:12</td>
+                  <td>Se ha salido de la geocerca</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> 
+
       </div>              
     </div>
 
-    <!-- The Ind Modal -->
+    <!-- The Geo Modal -->
     <div id="modal-Geo" class="modal">
 
       <!-- Modal content -->

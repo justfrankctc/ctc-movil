@@ -54,7 +54,7 @@ j$('#send').click(function() {
 	var lat = "19.438591"; 
 	var long = "-99.154154"
 	if(userValido && passValido){
-		urlMap = "http://192.168.1.40:3000/Map.html?&lat="+lat+"&long="+long;
+		urlMap = host+"/Map.html?&lat="+lat+"&long="+long;
 		// cordova.InAppBrowser.open;
 		// window.open(urlMap, "_self");
 		var options = 'toolbar=no,location=no,disallowoverscroll=no';		
@@ -67,7 +67,7 @@ j$('#send').click(function() {
 
 j$("#back").click(function(){
     console.log('Going back to login...');
-    j$( ".container" ).load( "http://192.168.1.40:3000/login.html", function(response, status, xhr ) {
+    j$( ".container" ).load(host+"/login.html", function(response, status, xhr ) {
         if ( status == "error" ) {
             console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
         } else {

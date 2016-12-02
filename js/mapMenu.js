@@ -25,17 +25,17 @@ var directionsService = new google.maps.DirectionsService;
 var directionsDisplay = new google.maps.DirectionsRenderer;
 var org = undefined;
 var dest =  undefined;
-j$('#geo001').click(function(){
-    closeModal(modalGeo);
-    var checked = j$('#geo001').prop('checked');
-    if(bermudaTriangle == undefined){ 
-        if(triangleCoords ==undefined){
+// j$('#geo001').click(function(){ 
+    // closeModal(modalGeo);
+    // var checked = j$('#geo001').prop('checked');
+    // if(bermudaTriangle == undefined){ 
+        // if(triangleCoords ==undefined){
             triangleCoords = [
                 {lat: 19.438591, lng: -99.154154},
                 {lat: 19.4339584, lng: -99.1551004},
                 {lat: 19.436710, lng: -99.150229}
             ];
-        }
+        // }
          bermudaTriangle = new google.maps.Polygon({
             paths: triangleCoords,
             strokeColor: '#517F17',
@@ -44,10 +44,10 @@ j$('#geo001').click(function(){
             fillColor: '#78be20',
             fillOpacity: 0.35
         });
-    }
+    // }
     // debugger;
-    showGeofence(bermudaTriangle, map, checked);    
-});
+    showGeofence(bermudaTriangle, map, true);    
+// });
 
 j$('#routeGen').click(function(){
     if(org == undefined){

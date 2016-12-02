@@ -73,7 +73,7 @@ j$('#send').click(function() {
 		if(coincide(pass, passConf)){
 			console.log('Sending data...');	
 			
-			j$( ".container" ).load( "http://192.168.1.40:3000/addDevice.html", function(response, status, xhr ) {
+			j$( ".container" ).load(host+"/addDevice.html", function(response, status, xhr ) {
 			    if ( status == "error" ) {
 			        console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
 			    } else {
@@ -87,7 +87,7 @@ j$('#send').click(function() {
 
 j$("#back").click(function(){
     console.log('Going back to login...');
-    j$( ".container" ).load( "http://192.168.1.40:3000/login.html", function(response, status, xhr ) {
+    j$( ".container" ).load(host+"/login.html", function(response, status, xhr ) {
         if ( status == "error" ) {
             console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
         } else {

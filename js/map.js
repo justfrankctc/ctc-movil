@@ -2,6 +2,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 var j$ = jQuery.noConflict();
 
+var host = decodeURIComponent(window.location.origin);
+
 function onDeviceReady() {
   // get lat & long from the URL
   var lat = parseFloat(getUrlParameter("lat"));
@@ -21,7 +23,7 @@ function onDeviceReady() {
   });
 
   // insert the menu
-  j$( ".mapMenu" ).load( "http://192.168.1.40:3000/mapMenu.html", function(response, status, xhr ) {
+  j$( ".mapMenu" ).load(host+"/mapMenu.html", function(response, status, xhr ) {
       if ( status == "error" ) {
           console.log("Sorry but there was an error: " + xhr.status + " " + xhr.statusText );
       } else {
